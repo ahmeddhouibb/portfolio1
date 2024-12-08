@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Contactez-moi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Parcours académique</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="stages.html">Stages</a></li>
+                <li><a href="manifestations.html">Manifestations</a></li>
+                <li><a href="matieres.html">Matières</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="quiz.html">Quizz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="temoignages.html">Témoignages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Coordonnées</h2>
+        <div class="contact-box">
+            <p><strong>Téléphone :</strong> (+216) 28 329 256</p>
+        </div>
+        <div class="contact-box">
+            <p><strong>Email :</strong> dhoubiamhed04@gmail.com</p>
+        </div>
+        <div class="contact-box">
+            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/dhouib-ahmed04/">dhouib-ahmed04</a></p>
+            <p><strong>GitHub :</strong> <a href="https://github.com/ahmeddhouibb">ahmeddhouibb</a></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Envoyer un message</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+                <label for="email">Votre e-mail :</label>
+                <input type="email" id="email" name="email" required placeholder="Votre email">
+            </div>
+            <div class="form-group">
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" required placeholder="Sujet de votre message">
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <div id="successMessage" class="success-message">Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.</div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Simple validation for required fields
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && subject && message) {
+                // Simulating the form submission success
+                document.getElementById('successMessage').style.display = 'block';
+
+                // Clear form fields after successful submission
+                document.getElementById('contactForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>

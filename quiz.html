@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="quiz.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Quizz sur le développement web</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Parcours académique</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="stages.html">Stages</a></li>
+                <li><a href="manifestations.html">Manifestations</a></li>
+                <li><a href="matieres.html">Matières</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="quiz.html">Quizz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="temoignages.html">Témoignages</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form id="quizForm">
+            <h2>Répondez aux questions suivantes :</h2>
+
+            <!-- Question 1 -->
+            <div class="question" id="q1">
+                <p>1. Quel langage est utilisé pour structurer une page web ?</p>
+                <input type="radio" id="q1a" name="q1" value="a">
+                <label for="q1a">a) CSS</label><br>
+                <input type="radio" id="q1b" name="q1" value="b">
+                <label for="q1b">b) HTML</label><br>
+                <input type="radio" id="q1c" name="q1" value="c">
+                <label for="q1c">c) JavaScript</label><br>
+                <button type="button" class="next" onclick="nextQuestion(1)">Suivant</button>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="q2" style="display:none;">
+                <p>2. Quel langage permet de styliser une page web ?</p>
+                <input type="radio" id="q2a" name="q2" value="a">
+                <label for="q2a">a) Python</label><br>
+                <input type="radio" id="q2b" name="q2" value="b">
+                <label for="q2b">b) Java</label><br>
+                <input type="radio" id="q2c" name="q2" value="c">
+                <label for="q2c">c) CSS</label><br>
+                <button type="button" class="prev" onclick="prevQuestion(2)">Précédent</button>
+                <button type="button" class="next" onclick="nextQuestion(2)">Suivant</button>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question" id="q3" style="display:none;">
+                <p>3. Quel attribut HTML est utilisé pour définir un lien hypertexte ?</p>
+                <input type="radio" id="q3a" name="q3" value="a">
+                <label for="q3a">a) href</label><br>
+                <input type="radio" id="q3b" name="q3" value="b">
+                <label for="q3b">b) src</label><br>
+                <input type="radio" id="q3c" name="q3" value="c">
+                <label for="q3c">c) alt</label><br>
+                <button type="button" class="prev" onclick="prevQuestion(3)">Précédent</button>
+                <button type="button" class="next" onclick="nextQuestion(3)">Suivant</button>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question" id="q4" style="display:none;">
+                <p>4. Quel élément HTML est utilisé pour afficher une image ?</p>
+                <input type="radio" id="q4a" name="q4" value="a">
+                <label for="q4a">a) &lt;img&gt;</label><br>
+                <input type="radio" id="q4b" name="q4" value="b">
+                <label for="q4b">b) &lt;picture&gt;</label><br>
+                <input type="radio" id="q4c" name="q4" value="c">
+                <label for="q4c">c) &lt;image&gt;</label><br>
+                <button type="button" class="prev" onclick="prevQuestion(4)">Précédent</button>
+                <button type="button" class="next" onclick="nextQuestion(4)">Suivant</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question" id="q5" style="display:none;">
+                <p>5. Quel élément HTML est utilisé pour créer un paragraphe ?</p>
+                <input type="radio" id="q5a" name="q5" value="a">
+                <label for="q5a">a) &lt;div&gt;</label><br>
+                <input type="radio" id="q5b" name="q5" value="b">
+                <label for="q5b">b) &lt;section&gt;</label><br>
+                <input type="radio" id="q5c" name="q5" value="c">
+                <label for="q5c">c) &lt;p&gt;</label><br>
+                <button type="button" class="prev" onclick="prevQuestion(5)">Précédent</button>
+                <button type="button" class="next" onclick="nextQuestion(5)">Suivant</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question" id="q6" style="display:none;">
+                <p>6. Quelle propriété CSS est utilisée pour changer la couleur de fond ?</p>
+                <input type="radio" id="q6a" name="q6" value="a">
+                <label for="q6a">a) color</label><br>
+                <input type="radio" id="q6b" name="q6" value="b">
+                <label for="q6b">b) background-color</label><br>
+                <input type="radio" id="q6c" name="q6" value="c">
+                <label for="q6c">c) font-color</label><br>
+                <button type="button" class="prev" onclick="prevQuestion(6)">Précédent</button>
+                <button type="button" class="next" onclick="nextQuestion(6)">Suivant</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question" id="q7" style="display:none;">
+                <p>7. Quelle balise HTML est utilisée pour créer un lien vers une feuille de style CSS externe ?</p>
+                <input type="radio" id="q7a" name="q7" value="a">
+                <label for="q7a">a) &lt;style&gt;</label><br>
+                <input type="radio" id="q7b" name="q7" value="b">
+                <label for="q7b">b) &lt;link&gt;</label><br>
+                <input type="radio" id="q7c" name="q7" value="c">
+                <label for="q7c">c) &lt;script&gt;</label><br>
+                <button type="button" class="prev" onclick="prevQuestion(7)">Précédent</button>
+                <button type="button" class="next" onclick="nextQuestion(7)">Suivant</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question" id="q8" style="display:none;">
+                <p>8. Quelle propriété CSS est utilisée pour centrer du texte ?</p>
+                <input type="radio" id="q8a" name="q8" value="a">
+                <label for="q8a">a) text-align</label><br>
+                <input type="radio" id="q8b" name="q8" value="b">
+                <label for="q8b">b) vertical-align</label><br>
+                <input type="radio" id="q8c" name="q8" value="c">
+                <label for="q8c">c) align-content</label><br>
+                <button type="button" class="prev" onclick="prevQuestion(8)">Précédent</button>
+                <button type="button" class="next" onclick="nextQuestion(8)">Suivant</button>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question" id="q9" style="display:none;">
+                <p>9. Quelle propriété CSS est utilisée pour définir la taille de la police ?</p>
+                <input type="radio" id="q9a" name="q9" value="a">
+                <label for="q9a">a) font-size</label><br>
+                <input type="radio" id="q9b" name="q9" value="b">
+                <label for="q9b">b) text-size</label><br>
+                <input type="radio" id="q9c" name="q9" value="c">
+                <label for="q9c">c) size-font</label><br>
+                <button type="button" class="prev" onclick="prevQuestion(9)">Précédent</button>
+                <button type="button" class="next" onclick="nextQuestion(9)">Suivant</button>
+            </div>
+<!-- Question 10 -->
+<div class="question" id="q10" style="display:none;">
+    <p>10. Quelle méthode JavaScript est utilisée pour sélectionner un élément par son ID ?</p>
+    <input type="radio" id="q10a" name="q10" value="a">
+    <label for="q10a">a) getElementById()</label><br>
+    <input type="radio" id="q10b" name="q10" value="b">
+    <label for="q10b">b) getElementsByClassName()</label><br>
+    <input type="radio" id="q10c" name="q10" value="c">
+    <label for="q10c">c) querySelector()</label><br>
+    <button type="button" class="prev" onclick="prevQuestion(10)">Précédent</button>
+    <button type="button" id="validateBtn" style="display:none;" onclick="calculateScore()">Valider</button>
+</div>
+
+</form>
+<div id="resultContainer" class="result" style="display: none;">
+    <h3 id="result"></h3>
+    <ul id="correctAnswersList"></ul>
+</div>
+
+        
+    </section>
+</form>
+</body>
+</html>
